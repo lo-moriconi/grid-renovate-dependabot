@@ -1,12 +1,17 @@
-   {
-     "extends": "config:recommended",
-     "packageRules": [
-       {
-         "enabled": false,
-         "matchPackageNames": ["*"],
-       }
-     ],
-     "vulnerabilityAlerts": true,
-	 "dependencyDashboard": true,
-     "osvVulnerabilityAlerts": true
-   }
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["cargo"],
+  "packageRules": [
+    {
+      "matchDatasources": ["cargo"],
+      "matchPackageNames": ["sys-info"],
+      "vulnerabilityAlerts": true,
+	  "osvVulnerabilityAlerts": true,
+      "automerge": false,
+      "labels": ["rust", "vulnerability"]
+    }
+  ],
+  "dependencyDashboard": true,
+  "schedule": ["every weekday after 9am and before 5pm"],
+  "rollbackPrs": true
+}
