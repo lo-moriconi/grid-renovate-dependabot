@@ -9,10 +9,6 @@ updates:
     directory: "/infrastructure/gsp-platform" # Root of the repository
     schedule:
       interval: "daily"
-    registries:
-      my-helm-registry:
-        type: "helm"
-        url: "https://lo-moriconi.github.io/grid-renovate-dependabot/"
   - package-ecosystem: "docker"
     directory: "/infrastructure/gsp-platform" # Root of the repository
     schedule:
