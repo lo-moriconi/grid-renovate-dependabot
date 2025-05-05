@@ -13,9 +13,6 @@
       "matchPackageNames": [
         "*"
       ],
-      "vulnerabilityAlerts": {
-        "enabled": true
-      },
       "osvVulnerabilityAlerts": true,
       "automerge": false,
       "labels": [
