@@ -13,5 +13,5 @@ annotations:
   artifacthub.io/prerelease: "true" # Fault: Deprecated annotation
 dependencies:
   - name: nginx
-    version: 1.16.0 # Fault: Specifying a version that is too old
+    version: 2.1.0 # Fault: Specifying a version that is too old
     repository: "https://helm.nginx.com/stable" # Fault: Deprecated stable repository
