@@ -1,9 +1,11 @@
 {
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "config:base"
   ],
   "enabledManagers": [
-    "cargo"
+    "cargo",
+    "helm"
   ],
   "packageRules": [
     {
@@ -19,8 +21,24 @@
         "rust",
         "vulnerability"
       ]
+    },
+    {
+      "matchManagers": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "deprecated-chart"
+      ],
+      "enabled": true
     }
   ],
+  "helm": {
+    "fileMatch": [
+      "Chart.yaml"
+    ],
+    "enabled": true
+  },
+  "osvVulnerabilityAlerts": true,
   "dependencyDashboard": true,
   "schedule": [
     "every weekday after 9am and before 5pm"

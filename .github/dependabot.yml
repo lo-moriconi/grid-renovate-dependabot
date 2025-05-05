@@ -5,3 +5,15 @@ updates:
     directory: "/src_rust" # Root directory where Cargo.toml is located
     schedule:
       interval: "daily" # Check for updates daily
+  - package-ecosystem: "helm"
+    directory: "/infrastructure/gsp-platform" # Root of the repository
+    schedule:
+      interval: "daily"
+    registries:
+      my-helm-registry:
+        type: "helm"
+        url: "https://charts.helm.sh/stable"
+  - package-ecosystem: "docker"
+    directory: "/infrastructure/gsp-platform" # Root of the repository
+    schedule:
+      interval: "daily"
