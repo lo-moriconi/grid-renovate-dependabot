@@ -6,6 +6,14 @@
   "enabledManagers": [
     "cargo",
     "helmv3"
+{
+  "extends": [
+    "config:recommended",
+    "config:base"
+  ],
+  "enabledManagers": [
+    "cargo",
+    "helmv3"
   ],
   "packageRules": [
     {
@@ -33,6 +41,11 @@
     }
   ],
   "helmv3": {
+	"registries": [
+      {
+        "url": "https://lo-moriconi.github.io/grid-renovate-dependabot/"
+      }
+    ],
     "fileMatch": [
       "Chart.yaml"
     ],

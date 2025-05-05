@@ -12,7 +12,7 @@ updates:
     registries:
       my-helm-registry:
         type: "helm"
-        url: "https://charts.helm.sh/stable"
+        url: "https://lo-moriconi.github.io/grid-renovate-dependabot/"
   - package-ecosystem: "docker"
     directory: "/infrastructure/gsp-platform" # Root of the repository
     schedule:
