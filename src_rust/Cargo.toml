@@ -5,4 +5,4 @@ edition = "2021"
 
 [dependencies]
 sys-info = "0.6.0" # Known vulnerable version
-chrono = "0.3.0"
+chrono = "0.4.41"
