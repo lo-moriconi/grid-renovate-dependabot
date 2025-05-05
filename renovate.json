@@ -27,21 +27,27 @@
         "helmv3"
       ],
       "matchPackageNames": [
-        "deprecated-chart"
+        "gsp_platform"
       ],
       "enabled": true
     }
   ],
+  "hostRules": [
+    {
+      "matchHost": "lo-moriconi.github.io",
+      "hostType": "helm",
+      "username": null,
+      "password": null
+    }
+  ],
   "helmv3": {
-    "registries": [
-      {
-        "url": "https://lo-moriconi.github.io/grid-renovate-dependabot/"
-      }
-    ],
     "fileMatch": [
-      "Chart.yaml"
+      "infrastructure/gsp_platform/Chart.yaml"
     ],
-    "enabled": true
+    "enabled": true,
+    "postUpdateOptions": [
+      "helmUpdateSubChartArchives"
+    ]
   },
   "osvVulnerabilityAlerts": true,
   "dependencyDashboard": true,
