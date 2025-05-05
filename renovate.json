@@ -5,7 +5,7 @@
   ],
   "enabledManagers": [
     "cargo",
-    "helm"
+    "helmv3"
   ],
   "packageRules": [
     {
