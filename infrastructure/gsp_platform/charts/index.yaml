@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  deprecated-chart:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-05-05T11:37:57.938231495+02:00"
+    deprecated: true
+    description: A Helm chart that is deprecated for testing
+    digest: 07f242d5c3ea35ee41334a9d44a1aa2dffb2806900c845c1391dd6d535fc470a
+    name: deprecated-chart
+    type: application
+    urls:
+    - https://lo-moriconi.github.io/grid-renovate-dependabot/deprecated-chart-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-05-05T11:37:57.937935706+02:00"
