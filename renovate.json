@@ -24,7 +24,7 @@
     },
     {
       "matchManagers": [
-        "helm"
+        "helmv3"
       ],
       "matchPackageNames": [
         "deprecated-chart"
