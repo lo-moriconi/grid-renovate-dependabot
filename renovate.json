@@ -32,7 +32,7 @@
       "enabled": true
     }
   ],
-  "helm": {
+  "helmv3": {
     "fileMatch": [
       "Chart.yaml"
     ],
