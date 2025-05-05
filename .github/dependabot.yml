@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Dependabot will handle Rust dependencies
+  - package-ecosystem: "cargo"
+    directory: "/src_rust" # Root directory where Cargo.toml is located
+    schedule:
+      interval: "daily" # Check for updates daily
