@@ -5,7 +5,8 @@
   ],
   "enabledManagers": [
     "cargo",
-    "helmv3"
+    "helmv3",
+    "docker"
   ],
   "packageRules": [
     {
@@ -30,6 +31,20 @@
         "gsp_platform"
       ],
       "enabled": true
+    },
+    {
+      "matchManagers": [
+        "docker"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "enabled": true,
+      "automerge": false,
+      "labels": [
+        "docker",
+        "image-update"
+      ]
     }
   ],
   "hostRules": [
@@ -47,6 +62,11 @@
     "enabled": true,
     "postUpdateOptions": [
       "helmUpdateSubChartArchives"
+    ]
+  },
+  "docker": {
+    "fileMatch": [
+      "infrastructure/gsp_platform/values.yaml" // Path to check Docker images
     ]
   },
   "osvVulnerabilityAlerts": true,

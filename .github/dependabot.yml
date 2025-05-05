@@ -6,10 +6,10 @@ updates:
     schedule:
       interval: "daily" # Check for updates daily
   - package-ecosystem: "helm"
-    directory: "/infrastructure/gsp-platform" # Root of the repository
+    directory: "/infrastructure/gsp_platform" # Root of the repository
     schedule:
       interval: "daily"
   - package-ecosystem: "docker"
-    directory: "/infrastructure/gsp-platform" # Root of the repository
+    directory: "/infrastructure/gsp_platform" # Root of the repository
     schedule:
       interval: "daily"
