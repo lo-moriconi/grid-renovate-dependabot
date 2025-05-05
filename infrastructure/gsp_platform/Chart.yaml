@@ -1,7 +1,17 @@
 apiVersion: v2
 name: deprecated-chart
-description: A Helm chart that is deprecated for testing
+description: A Helm chart for testing deprecations
 type: application
 version: 1.0.0
-appVersion: "1.0.0"
-deprecated: true
+appVersion: "1.0"
+deprecated: false # Fault: 'deprecated' field is not recommended for new charts
+maintainers:
+  - name: helm-bot
+    email: helm-bot@example.com
+    url: "http://helm-bot.invalid-url" # Fault: Invalid URL
+annotations:
+  artifacthub.io/prerelease: "true" # Fault: Deprecated annotation
+dependencies:
+  - name: nginx
+    version: 1.16.0 # Fault: Specifying a version that is too old
+    repository: "https://helm.nginx.com/stable" # Fault: Deprecated stable repository

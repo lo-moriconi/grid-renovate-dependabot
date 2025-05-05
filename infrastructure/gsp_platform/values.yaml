@@ -1,8 +1,19 @@
 replicaCount: 1
 image:
   repository: nginx
-  tag: "1.21.6"
-  pullPolicy: IfNotPresent
+  tag: 1.14.2 # Fault: Using an old and possibly insecure Docker image version
+  pullPolicy: Always
 service:
   type: ClusterIP
   port: 80
+resources: # Fault: Resources are not specified, leading to potential issues in production
+  limits:
+    memory: ""
+    cpu: ""
+  requests:
+    memory: ""
+    cpu: ""
+nodeSelector: {} # Fault: Empty object might trigger warnings
+tolerations: []
+affinity: {} # Fault: Empty object might trigger warnings
+deprecatedField: true # Fault: Including a deprecated custom field
